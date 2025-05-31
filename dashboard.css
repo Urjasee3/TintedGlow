@@ -38,7 +38,7 @@ body.night{
     font-family: 'DM Serif Display', serif;
     font-size: 2rem;
     background: var(--logo);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 body.night .logo{
@@ -144,6 +144,7 @@ body.night .quotes {
 body.night .quotes h2 {
     color: var(--dark-text);
 }
+
 #quotes-text{
     width: 100%;
     padding: 1rem;
@@ -314,11 +315,13 @@ body.night .calender-grid .today {
 }
 
 /* responsive */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .dashboard {
         flex-direction: column;
+        flex-wrap: wrap;
     }
-    nav {
+  nav {
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -371,13 +374,9 @@ body.night ::placeholder {
   color: var(--dark-text);
   opacity: 0.7;
 }
-
-
-
-
-
-
-
-
-
-
+.footer {
+      text-align: center;
+      margin: 4rem 0 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
