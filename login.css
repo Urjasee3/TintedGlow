@@ -6,14 +6,14 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-color: linear-gradient(206deg, #FFF1F5 0%, #FFE7EB 100%);
+    --bg-color: linear-gradient(206deg, #FFF1F5 0%, #ffacbf 100%);
     --nav-color: #FFE7EB;
     --text-color: #4B1A2A;
-    --card-color: #FFFFFF;
+    --card-color: linear-gradient(150deg, #ffffff 0%, #ffe3ee 100%);
     --button-color: #FF5E84;
     --shadow-color: #B8B8B8;
     --button-hover: #e24d71;
-    --logo: linear-gradient(90deg,#FF5E84, #ffffff);
+    --logo: linear-gradient(90deg,#FF5E84, #423dcb );
 }
 
 body{
@@ -93,7 +93,7 @@ button{
     width: 100%;
     padding: 0.75rem;
     background: var(--button-color);
-    color: var(--card-color);
+    color: white;
     font-size: 1rem;
     font-weight: bold;
     border: none;
