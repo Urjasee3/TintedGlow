@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TintedGlow – Dashboard </title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="day">
+    <header>
+        <nav>
+        <div class="logo">TintedGlow</div>
+        <div class="navlinks">
+            <a href="#">Home</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Pick a Routine</a>
+            <a href="#">Blog</a>
+        </div>
+            <div class="toggle" id="theme-toggle"></div>
+        </nav>
+    </header>
+
+    <section class="greeting">
+        Hello, <strong>GlowGetter</strong>! Welcome to your Dashboard. Let's track your skin today.
+    </section>
+
+    <section class="dashboard">
+        <div class="left">
+            <div class="card calender">
+                <div id="calender-container">
+                    <div class="calender-header">
+                        <button id="prev-month">←</button>
+                        <h3 id="month-year"></h3>
+                        <button id="next-month">→</button>
+                    </div>
+                    <div class="calender-grid" id="calender-grid"></div>
+                    <div id="entry-display"></div>
+                </div>
+            </div>
+            <div class="card quotes">
+                <h2>✨ Affirmation of the Day</h2>
+                <div class="quotes-text"><p id="quotes-text"></p></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card">
+                <form class="log-form">
+                    <label for="mood" class="form-label">How are you feeling today?</label>
+                    <select name="mood" id="mood" class="mood">
+                        <option value="😄">😄Very Happy</option>
+                        <option value="😊">😊Happy</option>
+                        <option value="😐">😐Okay</option>
+                        <option value="😞">😞Sad</option>
+                        <option value="😡">😡Angry</option>
+                        <option value="😴">😴Tired</option>
+                    </select>
+                        <h4 class="form-label">How is your skin feeling?</h4>
+                    <div class="skin-condition">
+                        <label for="normal">
+                            <input type="checkbox" id="normal">🤍Normal
+                        </label>
+                        <label for="dry">
+                            <input type="checkbox" id="dry">❄️Dry
+                        </label>
+                        <label for="dull">
+                            <input type="checkbox" id="dull">🌫️Dull
+                        </label>
+                        <label for="sensitive">
+                            <input type="checkbox" id="sensitive">🍃Sensitive
+                        </label>
+                        <label for="oily">
+                            <input type="checkbox" id="oily">💧Oily
+                        </label>
+                        <label for="acne">
+                            <input type="checkbox" id="acne">🍓Acne
+                        </label>
+                        <label for="redness">
+                            <input type="checkbox" id="redness">🌹Redness
+                        </label>
+                    </div>
+                    <label for="notes" class="form-label">Write about your day</label>
+                    <textarea name="notes" id="notes" rows="4" placeholder="Share anything you want..."></textarea>
+                    <button type="submit">Save Entry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="dashboard.js"></script>
+</body>
+</html>
