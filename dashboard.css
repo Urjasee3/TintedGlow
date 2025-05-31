@@ -320,18 +320,17 @@ body.night .calender-grid .today {
     .dashboard {
         flex-direction: column;
     }
-    .navlinks {
-    flex-wrap: wrap;
-  }
-
-  nav {
-    flex-wrap: wrap;
+    nav {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   .toggle {
-    margin-left: auto;
-    margin-top: 0.5rem;
+    margin-left: 0;
+    margin-top: 0;
+    flex-shrink: 0;
   }
 }
 
