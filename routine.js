@@ -31,14 +31,14 @@ const routineData= {
     }
 };
 const skinTips = {
-    dry: "Use cream-based products rwith Ceramides and Squalane. Avoid foaming cleansers, apply face oil at night to lock in moisture and smooth flaky patches.",
+    dry: "Use cream-based products with Ceramides and Squalane. Avoid foaming cleansers, apply face oil at night to lock in moisture and smooth flaky patches.",
     oily: "Go for gel-based, non-comedogenic products with Salicylic Acid and Niacinamide, and use clay masks weekly(or 2-3x a week) to reduce excess sebum and unclog pores.",
     combination: "Balance is key! Gel moisturizers for oily areas and cream for dry areas work well and use balancing toners with ingredients like Green Tea or Rose Water.",
     sensitive: "Stick to minimal, fragrance-free formulas with calming agents like Centella and Oat Extract, and always patch test new products before full use.",
     normal: "Maintain your healthy skin with a simple routine  including antioxidants, lightweight hydration, and consistent sunscreen — less is more when balanced."
 };
 const concernTips= {
-    acne: "Use Salicylic Acid Serum (for beginer low concentration 2-3x a week). Treat breakouts gently with targeted actives like Benzoyl Peroxide or Azelaic Acid (for skincare intermediate and pro), avoid touching your face, and keep tools and pillowcases clean.",
+    acne: "Use Salicylic Acid Serum (for beginners, low concentration 2- 3x a week). Treat breakouts gently with targeted actives like Benzoyl Peroxide or Azelaic Acid (for skincare intermediate and pro), avoid touching your face, and keep tools and pillowcases clean.",
     pigmentation: "Use Vitamin C, Alpha Arbutin, or Kojic Acid to brighten dark spots, and avoid sun exposure and reapply SPF every 2–3 hours to prevent further darkening.",
     dullness: "Boost skin radiance with mild chemical exfoliation, hydrating essences, and antioxidant serums like Vitamin C to improve tone over time and don't forget to reapply SPF every 2-3 hours",
     aging: "Start with peptides and deeply hydrating moisturizers, slowly introduce retinol or bakuchiol at night, and always follow with SPF to protect and preserve collagen.",
