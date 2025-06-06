@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    /* light mode */
+    --bg-color: linear-gradient(206deg, #FFF1F5 0%, #fac6d2 100%);
+    --nav-color: linear-gradient(150deg, #FFE7EB 0%, #ffc7d4 100%);
+    --text-color: #4B1A2A;
+    --card-color: linear-gradient(150deg, #ffffff 0%, #ffe3ee 100%);
+    --button-color: #FF5E84;
+    --shadow-color: #B8B8B8;
+    --button-hover: #e24d71;
+    --logo: linear-gradient(90deg,#FF5E84, #aba8f7 );
+
+    /* dark mode */
+    --dark-bg: linear-gradient(154deg, #070F2B 0%, #010114 100%);            
+    --dark-nav: linear-gradient(154deg, #1B1A55 0%, #3c3a7b 100%);   
+    --dark-text: #decafe;         
+    --dark-card: linear-gradient(206deg, #111634 0%, #121850 100%);        
+    --dark-button: #6462a0;        
+    --dark-shadowr: #535C91;       
+    --dark-button-hover: #A8A5D4;       
+    --dark-logo: linear-gradient(90deg, #9290C3, #FF5E84); 
+}
+
+body.day{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+body.night{
+    background: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.logo{
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    background: var(--logo);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.night .logo{
+    background: var(--dark-logo);
+    background-clip: text;
+}
+
+nav{
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    background: var(--nav-color);
+    box-shadow: 0 2px 6px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s ease;
+}
+body.night nav {
+  background: var(--dark-nav);
+  box-shadow: 0 2px 6px var(--dark-shadow);
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+nav a{
+    margin-left: 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+body.night nav a {
+  color: var(--dark-text);
+}
+nav a:hover{
+    color: var(--button-color);
+}
+body.night nav a:hover{
+    color: var(--dark-button);
+}
+
+.greeting{
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.routine{
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    flex-wrap: wrap;
+}
+
+.form, .result{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    display: none;
+}
+
+.card{
+    background: var(--card-color);
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+body.night .card{
+    background: var(--dark-card);
+    box-shadow: 0 0 10px var(--dark-shadow);
+}
+
+.glow-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form-head{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.radio-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0 1rem 0;
+}
+.radio-group label{
+    background: var(--card-color);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 2px solid var(--nav-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+body.night .radio-group label{
+    background: var(--dark-bg);
+}
+.radio-group input{
+    display: none;
+}
+.radio-group label:has(input:checked){
+    border: 2px solid var(--button-color);
+    background: #ffe3ee;
+    box-shadow: 0 0 6px var(--shadow-color);
+    border-radius: 12px;
+    padding: 0.25rem 0.75rem;
+}
+body.night .radio-group label:has(input:checked) {
+  border-color: var(--dark-button);
+  background: var(--dark-card);
+  box-shadow: 0 0 6px var(--dark-shadowr);
+}
+
+.radio-group label:hover{
+    border: 2px solid var(--button-color);
+    box-shadow: 0 0 6px var(--button-color);
+    transition: box-shadow 0.5s ease;
+
+}
+body.night .radio-group label:hover{
+    border: 2px solid var(--dark-button);
+    box-shadow: 0 0 6px var(--dark-button);
+}
+
+
+button{
+    background: var(--button-color);
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+body.night button {
+  background: var(--dark-button);
+  color: var(--dark-bg);
+}
+
+button:hover{
+    background: var(--button-hover);
+}
+body.night button:hover {
+  background: var(--dark-button-hover);
+}
+
+@media (max-width: 768px) {
+    .routine {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .toggle {
+    margin-left: 0;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+}
+
+
+/* toggle mode */
+.toggle{
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+    border-radius:50px;
+    background: var(--button-color);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.toggle::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: var(--nav-color);
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    box-shadow: 0 0 6px var(--button-color);
+    transition: left 0.3s ease;
+}
+body.night .toggle{
+    background: var(--dark-button);
+}
+body.night .toggle::before{
+    left:27px;
+    box-shadow: 0 0 8px var(--dark-button);
+
+}

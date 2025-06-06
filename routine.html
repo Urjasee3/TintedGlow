@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TintedGlow – Pick a Routine</title>
+    <link rel="stylesheet" href="routine.css">
+</head>
+<body class="day">
+    <header>
+        <nav>
+            <div class="logo">TintedGlow</div>
+            <div class="navlinks">
+                <a href="#">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="routine.html">Pick a Routine</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="toggle" id="theme-toggle"></div>
+        </nav>
+    </header>
+    <section class="greeting">
+        Let's Make a Skincare Routine!
+    </section>
+
+    <section class="routine">
+        <div class="card form">
+            <h3> ✨ Build Your Personalized Skincare Routine</h3>
+
+            <form id="glow-form" class="glow-form">
+                <label class="form-head">Skin Type:</label>
+                <div class="radio-group" id="skinType-group">
+                    <label><input type="radio" name="skinType" value="dry" required> ❄️Dry</label>
+                    <label><input type="radio" name="skinType" value="oily"> 💧Oily</label>
+                    <label><input type="radio" name="skinType" value="combination"> 😶‍🌫️Combination</label>
+                    <label><input type="radio" name="skinType" value="sensitive"> 🍃Sensitive</label>
+                    <label><input type="radio" name="skinType" value="normal"> 🍊Normal</label>
+                </div><br><br>
+
+                <label class="form-head">Main Skin Concern:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="concern" value="acne" required> Acne</label>
+                    <label><input type="radio" name="concern" value="pigmentation"> Pigmentation</label>
+                    <label><input type="radio" name="concern" value="dullness"> Dullness</label>
+                    <label><input type="radio" name="concern" value="aging"> Aging</label>
+                    <label><input type="radio" name="concern" value="redness"> Redness</label>
+                    <label><input type="radio" name="concern" value="dehydration"> Dehydration</label>
+                </div><br><br>
+
+                <label class="form-head">Experience Level:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="level" value="beginner" required> Beginner</label>
+                    <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
+                    <label><input type="radio" name="level" value="pro"> Skincare Pro</label>
+                </div>
+
+                <label class="form-head">Texture Preference:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="texture" value="gel" required> Gel-Based</label>
+                    <label><input type="radio" name="texture" value="cream"> Cream-Based</label>
+                </div><br><br>
+
+                <button type="submit">✨ Show My Routine</button>
+            </form>
+
+        </div>
+        
+        <div class="card result hidden" id="result">Your Personalized Skincare Routine.</div>
+    </section>
+
+    <footer class="footer">
+        Made with 💗 by Urjasee — TintedGlow © 2025
+    </footer>
+
+    <script src="routine.js"></script>
+</body>
+</html>
