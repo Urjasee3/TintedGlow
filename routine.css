@@ -196,6 +196,13 @@ body.night button:hover {
   background: var(--dark-button-hover);
 }
 
+.footer {
+      text-align: center;
+      margin: 4rem 0 1rem;
+      font-size: 0.9rem;
+      color: #777;
+}
+
 @media (max-width: 768px) {
     .routine {
         flex-direction: column;
