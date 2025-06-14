@@ -439,6 +439,7 @@ body.night .blog-text p {
 
 .greeting {
   padding: 0.5rem;
+  text-align: center;
 }
 
 .greeting h1 {
