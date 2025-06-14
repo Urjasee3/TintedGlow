@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-color: linear-gradient(206deg, #FFF1F5 0%, #ffacbf 100%);
+    /* light mode */
+    --bg-color: linear-gradient(206deg, #FFF1F5 0%, #fac6d2 100%);
     --nav-color: linear-gradient(150deg, #FFE7EB 0%, #ffc7d4 100%);
     --text-color: #4B1A2A;
     --card-color: linear-gradient(150deg, #ffffff 0%, #ffe3ee 100%);
@@ -15,6 +16,7 @@
     --button-hover: #e24d71;
     --logo: linear-gradient(90deg,#FF5E84, #aba8f7 );
 
+    /* dark mode */
     --dark-bg: linear-gradient(154deg, #070F2B 0%, #010114 100%);            
     --dark-nav: linear-gradient(154deg, #1B1A55 0%, #3c3a7b 100%);   
     --dark-text: #decafe;         
@@ -38,7 +40,7 @@ body.night{
     font-family: 'DM Serif Display', serif;
     font-size: 2rem;
     background: var(--logo);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 body.night .logo{
@@ -50,16 +52,18 @@ body.night .logo{
 nav{
     font-size: 1rem;
     padding: 1rem 2rem;
-    background: var(--nav-color);
-    box-shadow: 0 2px 6px var(--shadow-color);
+    background: var(--bg-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.5s ease;
 }
 body.night nav {
-  background: var(--dark-nav);
-  box-shadow: 0 2px 6px var(--dark-shadow);
+  background: var(--dark-bg);
+  box-shadow: 0 2px 4px var(--dark-shadow);
 }
 
 .navlinks{
@@ -83,10 +87,55 @@ body.night nav a:hover{
     color: var(--dark-button);
 }
 
-.greeting{
-    padding: 1.5rem 2rem;
+.skin {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.skin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+  display: block;
+}
+
+
+.greeting {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  padding: 1rem;
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+
+.greeting h1{
     font-size: 2rem;
     font-weight: bold;
+}
+.greeting p{
+    font-size: 1rem;
+}
+body.night .skin::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7,15,43,0.4);
+    z-index: 1;
 }
 
 .dashboard{
@@ -109,7 +158,7 @@ body.night nav a:hover{
     background: var(--card-color);
     position: relative;
     padding: 1.5rem;
-    border-radius: 20px;
+    border-radius: 12px;
     box-shadow: 0 0 10px var(--shadow-color);
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
@@ -329,6 +378,15 @@ body.night .calender-grid .today {
     flex-wrap: wrap;
   }
 
+  .greeting {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .greeting h1 {
+    font-size: 1.4rem;
+  }
+
   .toggle {
     margin-left: 0;
     margin-top: 0;
@@ -380,3 +438,12 @@ body.night ::placeholder {
       font-size: 0.9rem;
       color: #777;
     }
+
+
+
+
+
+
+
+
+
