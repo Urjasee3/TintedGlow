@@ -222,6 +222,9 @@ body.night .skin::after{
   background: var(--logo);
   border-radius: 20px;
 }
+body.night .meter-fill{
+  background: var(--dark-logo);
+}
 .main-img {
   flex: 1 1 50%;
   display: flex;
