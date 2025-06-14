@@ -418,11 +418,6 @@ body.night .blog-text p {
 }
 
 @media(max-width: 768px) {
-  .blog-section {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
   nav {
     width: 100vw;
     display: flex;
@@ -432,14 +427,104 @@ body.night .blog-text p {
     flex-wrap: wrap;
   }
 
-  .greeting {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
+  /* Banner (skin section) */
+.skin {
+  height: 50vh;
+}
 
-  .greeting h1 {
-    font-size: 1.4rem;
-  }
+.skin img {
+  height: 100%;
+}
+
+.greeting {
+  padding: 0.5rem;
+}
+
+.greeting h1 {
+  font-size: 1.5rem;
+}
+
+.greeting p {
+  font-size: 0.85rem;
+}
+
+.short-icon img{
+  width: 30px;
+}
+.short-icon{
+  font-size: 0.6rem;
+}
+/* Kindness section */
+.kindness {
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  font-size: 0.7rem;
+}
+
+.kindness h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home h2{
+  font-size: 1.2rem;
+}
+.home p{
+  font-size: 0.8rem;
+}
+.quest-card {
+  padding: 1rem;
+  min-height: auto;
+  height: auto;
+}
+.glow-meter {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Ingredient cards */
+.ingredients-scroll {
+  padding: 1rem;
+}
+
+.ingredient-card {
+  padding: 1rem;
+  min-width: 140px;
+}
+
+.ingredient-card h3 {
+  font-size: 1rem;
+}
+
+.ingredient-card p {
+  font-size: 0.7rem;
+}
+
+/* Blog section */
+.blog-highlight {
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+.blog-highlight img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-text h2 {
+  font-size: 1.3rem;
+}
+
+.blog-text p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.left {
+  padding: 0.5rem;
+  gap: 1rem;
+}
   .right {
     flex-direction: column;
     gap: 1.5rem;
