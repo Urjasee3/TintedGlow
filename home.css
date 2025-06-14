@@ -425,6 +425,7 @@ body.night .blog-text p {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    font-size: 0.9rem;
   }
 
   /* Banner (skin section) */
