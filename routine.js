@@ -7,27 +7,27 @@ const routineData= {
     pigmentation:{
         ingredients: ["Vitamin C", "Alpha Arbutin", "Licorice Extract", "Kojic Acid", "Tranexamic Acid", "Niacinamide"],
         am: ["Brightening Cleanser", "Vitamin C Serum", "Moisturizer", "Sunscreen SPF 50+"],
-        pm: ["Gentle Cleanser","PHA Toner", "Alpha Arbutin Serum", "Ceramide Cream"]
+        pm: ["Gentle Cleanser","PHA Toner", "Alpha Arbutin Serum","Eye serum", "Ceramide Cream"]
     },
     dullness: {
     ingredients: ["Vitamin C", "PHA", "Licorice Extract", "Hyaluronic Acid", "Niacinamide"],
     am: ["Hydrating Cleanser", "Vitamin C Serum", "Light Moisturizer", "Sunscreen"],
-    pm: ["Mild Exfoliating Cleanser", "PHA Toner", "Squalane or Night Cream"]
+    pm: ["Mild Exfoliating Cleanser", "PHA Toner", "Hydrating Serum", "Eye serum", "Squalane or Night Cream"]
     },
     aging: {
     ingredients: ["Retinol", "Peptides", "Ceramides", "Vitamin C", "Panthenol"],
     am: ["Cream Cleanser", "Peptide Serum", "Hydrating Cream", "SPF 50+"],
-    pm: ["Gentle Cleanser", "Retinol (2–3x a week)", "Peptide Cream"]
+    pm: ["Gentle Cleanser", "Hydrating Toner", "Retinol (2–3x a week)", "Eye serum", "Peptide Cream"]
     },
     redness: {
     ingredients: ["Centella Asiatica", "Allantoin", "Green Tea", "Panthenol"],
     am: ["Soothing Cleanser", "Centella Toner", "Calming Cream", "Mineral Sunscreen"],
-    pm: ["Barrier Repair Cleanser", "Allantoin Serum", "Thick Moisturizer"]
+    pm: ["Barrier Repair Cleanser", "Allantoin Serum",  "Thick Moisturizer"]
     },
     dehydration: {
     ingredients: ["Hyaluronic Acid", "Glycerin", "Ceramides", "Squalane"],
     am: ["Hydrating Cleanser", "HA Serum", "Moisturizer", "SPF 30+"],
-    pm: ["Cream Cleanser", "HA + Squalane Serum", "Overnight Mask"]
+    pm: ["Cream Cleanser", "HA + Squalane Serum", "Eye serum","Overnight Mask"]
     }
 };
 const skinTips = {
@@ -38,7 +38,7 @@ const skinTips = {
     normal: "Maintain your healthy skin with a simple routine  including antioxidants, lightweight hydration, and consistent sunscreen — less is more when balanced."
 };
 const concernTips= {
-    acne: "Use Salicylic Acid Serum (for beginners, low concentration 2- 3x a week). Treat breakouts gently with targeted actives like Benzoyl Peroxide or Azelaic Acid (for skincare intermediate and pro), avoid touching your face, and keep tools and pillowcases clean.",
+    acne: "Use Salicylic Acid Serum (for beginer low concentration 2-3x a week). Treat breakouts gently with targeted actives like Benzoyl Peroxide or Azelaic Acid (for skincare intermediate and pro), avoid touching your face, and keep tools and pillowcases clean.",
     pigmentation: "Use Vitamin C, Alpha Arbutin, or Kojic Acid to brighten dark spots, and avoid sun exposure and reapply SPF every 2–3 hours to prevent further darkening.",
     dullness: "Boost skin radiance with mild chemical exfoliation, hydrating essences, and antioxidant serums like Vitamin C to improve tone over time and don't forget to reapply SPF every 2-3 hours",
     aging: "Start with peptides and deeply hydrating moisturizers, slowly introduce retinol or bakuchiol at night, and always follow with SPF to protect and preserve collagen.",
@@ -66,12 +66,12 @@ let pmSteps = [...routine.pm];
 let ingre = [...routine.ingredients];
 
 if (level === "beginner") {
-    const avoidWords = ["retinol", "acid", "benzoyl peroxide", "retinoids", "pha", "vitamin c", "alpha arbutin"];
+    const avoidWords = ["retinol", "acid", "benzoyl peroxide", "retinoids", "pha", "vitamin c", "alpha arbutin", "eye serum"];
     amSteps = amSteps.filter(step => !avoidWords.some(w => step.toLowerCase().includes(w)));
     pmSteps = pmSteps.filter(step => !avoidWords.some(w => step.toLowerCase().includes(w)));
     ingre = ingre.filter(ing => !avoidWords.some(w => ing.toLowerCase().includes(w)));
 } else if (level === "intermediate") {
-    const avoidWords = ["benzoyl peroxide", "retinoids"];
+    const avoidWords = ["benzoyl peroxide", "retinoids", "eye serum"];
     amSteps = amSteps.filter(step => !avoidWords.some(w => step.toLowerCase().includes(w)));
     pmSteps = pmSteps.filter(step => !avoidWords.some(w => step.toLowerCase().includes(w)));
     ingre = ingre.filter(ing => !avoidWords.some(w => ing.toLowerCase().includes(w)));
